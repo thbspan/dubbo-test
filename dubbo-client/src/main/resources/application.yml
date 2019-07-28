@@ -1,3 +1,16 @@
 spring:
   application:
-    name: dubbo-client-sample
+    name: dubbo-client
+
+dubbo:
+  application:
+    name: dubbo-client
+    owner: test
+  protocol:
+    name: dubbo
+    port: 9527
+  registry:
+    # zooker注册中心
+    address: zookeeper://localhost:2181
+    # 缓存的服务信息
+    file: D:/dubbo-client-service.properties

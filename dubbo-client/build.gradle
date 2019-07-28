@@ -16,5 +16,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.1'
     implementation 'org.apache.dubbo:dubbo:2.7.1'
+    implementation('org.apache.dubbo:dubbo-dependencies-zookeeper:2.7.1') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+        exclude group: 'log4j', module: 'log4j'
+    }
     testCompile 'junit:junit:4.12'
 }

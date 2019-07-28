@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 @EnableAutoConfiguration
 public class DubboClientBootstrap {
 
-    @Reference(url = "dubbo://192.168.0.108:9527")
+    @Reference
     private IHello hello;
 
     public static void main(String[] args) {
