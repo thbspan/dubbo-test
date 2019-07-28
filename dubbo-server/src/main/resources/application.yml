@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: dubbo-server-sample
+
+dubbo:
+  application:
+    name: dubbo-server
+    owner: test
+  protocol:
+    name: dubbo
+    port: 9527
+  registry:
+    # 不需要注册中心
+    address: N/A

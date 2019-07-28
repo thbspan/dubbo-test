@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+
+dependencies {
+    compile project(":service-api")
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.1'
+    implementation 'org.apache.dubbo:dubbo:2.7.1'
+    testCompile 'junit:junit:4.12'
+}
