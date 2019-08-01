@@ -6,5 +6,6 @@
 
     <bean id="hello" class="com.test.HelloImpl"/>
 
-    <dubbo:service interface="com.test.IHello" ref="hello"/>
+    <!-- 设置版本号 -->
+    <dubbo:service interface="com.test.IHello" ref="hello" version="0.0.1"/>
 </beans>
