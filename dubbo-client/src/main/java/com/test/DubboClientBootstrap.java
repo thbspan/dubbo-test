@@ -17,7 +17,7 @@ public class DubboClientBootstrap {
      * return empty
      * http://dubbo.apache.org/zh-cn/docs/user/demos/local-mock.html
      */
-    @Reference(version = "0.0.1", cluster = "failover", mock = "force:return null")
+    @Reference(version = "0.0.1", cluster = "failover", mock = "force:return empty", check = false)
     private IHello hello;
 
     public static void main(String[] args) {
@@ -26,6 +26,9 @@ public class DubboClientBootstrap {
 
     @Bean
     public ApplicationRunner runner() {
-        return args -> System.out.println(hello .say("jack"));
+        return args -> {
+            System.out.println(hello.say("jack"));
+            System.out.println(hello.get(1));
+        };
     }
 }
