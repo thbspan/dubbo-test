@@ -3,4 +3,5 @@ include 'service-api'
 include 'service-provider'
 include 'dubbo-client'
 include 'dubbo-server'
+include 'spi-test'
 
