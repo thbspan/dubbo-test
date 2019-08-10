@@ -37,7 +37,9 @@ public class ExtensionTest {
     @Test
     public void testActivateExtension() {
         URL url = new URL("", "localhost", 2181);
-        url = url.addParameter("cache", "cache");
+//        url = url.addParameter("cache", "cache");
+//        url = url.addParameter("cache", "jcache");
+        url = url.addParameter("cache", "echo");
         ExtensionLoader.getExtensionLoader(Filter.class).getActivateExtension(url, "cache").forEach(System.out::println);
     }
 }
