@@ -5,4 +5,9 @@ public class Banana implements Fruit{
     public String getName(FruitInfo fruitInfo) {
         return "banana";
     }
+
+    @Override
+    public String test() {
+        return "banana test";
+    }
 }

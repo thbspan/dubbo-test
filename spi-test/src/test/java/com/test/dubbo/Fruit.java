@@ -7,4 +7,6 @@ import org.apache.dubbo.common.extension.SPI;
 public interface Fruit {
     @Adaptive
     String getName(FruitInfo fruitInfo);
+
+    String test();
 }
