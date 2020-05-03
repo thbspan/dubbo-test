@@ -14,10 +14,9 @@ sourceCompatibility = 1.8
 dependencies {
     compile project(":service-api")
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.1'
-    implementation 'org.apache.dubbo:dubbo:2.7.1'
-    implementation 'com.alibaba:fastjson:1.2.59'
-    implementation('org.apache.dubbo:dubbo-dependencies-zookeeper:2.7.1') {
+    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.6'
+    implementation 'com.alibaba:fastjson:1.2.68'
+    implementation('org.apache.dubbo:dubbo-dependencies-zookeeper:2.7.6') {
         exclude group: 'org.slf4j', module: 'slf4j-log4j12'
         exclude group: 'log4j', module: 'log4j'
     }

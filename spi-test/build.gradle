@@ -10,5 +10,5 @@ sourceCompatibility = 1.8
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    implementation 'org.apache.dubbo:dubbo:2.7.1'
+    implementation 'org.apache.dubbo:dubbo:2.7.6'
 }
