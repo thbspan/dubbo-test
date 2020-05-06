@@ -18,4 +18,4 @@ dubbo:
     # zooker注册中心
     address: zookeeper://localhost:2181
     # 缓存的服务信息
-    file: D:/dubbo-server-service.properties
+    file: ${user.home}/.dubbo/dubbo-server.properties

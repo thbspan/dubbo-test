@@ -4,8 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <bean id="hello" class="com.test.HelloImpl"/>
+    <bean class="com.test.HelloImpl" id="helloImpl"/>
 
+    <bean class="com.test.AsyncServiceImpl" id="asyncServiceImpl"/>
     <!-- 设置版本号 -->
-    <dubbo:service interface="com.test.IHello" ref="hello" version="0.0.1"/>
+    <dubbo:service interface="com.test.IHello" ref="helloImpl" version="0.0.1"/>
+    <dubbo:service interface="com.test.AsyncService" ref="asyncServiceImpl"/>
 </beans>

@@ -20,6 +20,9 @@ public class DubboClientBootstrap {
     @Reference(version = "0.0.1", cluster = "failover", check = false)
     private IHello hello;
 
+    @Reference(timeout = 5000)
+    private AsyncService asyncService;
+
     public static void main(String[] args) {
         SpringApplication.run(DubboClientBootstrap.class).close();
     }
@@ -29,6 +32,13 @@ public class DubboClientBootstrap {
         return args -> {
             System.out.println(hello.say("jack"));
             System.out.println(hello.get(1));
+            asyncService.sayHello("jack").whenComplete((v, t) -> {
+                if (t != null) {
+                    t.printStackTrace();
+                } else {
+                    System.out.println("Async Response: " + v);
+                }
+            });
         };
     }
 }
