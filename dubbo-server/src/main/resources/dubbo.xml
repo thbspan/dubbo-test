@@ -8,6 +8,6 @@
 
     <bean class="com.test.AsyncServiceImpl" id="asyncServiceImpl"/>
     <!-- 设置版本号 -->
-    <dubbo:service interface="com.test.IHello" ref="helloImpl" version="0.0.1"/>
-    <dubbo:service interface="com.test.AsyncService" ref="asyncServiceImpl"/>
+    <dubbo:service interface="com.test.IHello" ref="helloImpl" version="1.0"/>
+    <dubbo:service interface="com.test.AsyncService" ref="asyncServiceImpl" timeout="5000"/>
 </beans>

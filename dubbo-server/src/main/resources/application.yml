@@ -19,3 +19,4 @@ dubbo:
     address: zookeeper://localhost:2181
     # 缓存的服务信息
     file: ${user.home}/.dubbo/dubbo-server.properties
+    simplified: true

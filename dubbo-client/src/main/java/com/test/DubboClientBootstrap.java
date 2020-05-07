@@ -17,10 +17,10 @@ public class DubboClientBootstrap {
      * return empty
      * http://dubbo.apache.org/zh-cn/docs/user/demos/local-mock.html
      */
-    @Reference(version = "0.0.1", cluster = "failover", check = false)
+    @Reference(version = "1.0", cluster = "failover", check = false)
     private IHello hello;
 
-    @Reference(timeout = 5000)
+    @Reference
     private AsyncService asyncService;
 
     public static void main(String[] args) {
