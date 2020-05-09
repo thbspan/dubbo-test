@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.1.6.RELEASE'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -10,16 +9,16 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-
 dependencies {
     compile project(":service-provider")
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.6'
-    implementation('org.apache.dubbo:dubbo-dependencies-zookeeper:2.7.6') {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-        exclude group: 'log4j', module: 'log4j'
+    implementation 'com.alibaba.boot:dubbo-spring-boot-starter:0.2.1.RELEASE'
+    implementation "com.alibaba:dubbo-dependencies-bom:$dubboVerson"
+    implementation 'com.alibaba:dubbo'
+    implementation ('org.apache.curator:curator-framework') {
+        exclude group: 'log4j'
     }
     // 支持telnet命令(序列化依赖fastjson)
-    implementation 'com.alibaba:fastjson:1.2.68'
-    testCompile 'junit:junit:4.12'
+    implementation 'com.alibaba:fastjson'
+    testCompile 'junit:junit'
 }

@@ -1,5 +1,11 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+}
+
 group 'com.test'
 version '1.0-SNAPSHOT'
+
+ext.dubboVerson = '2.6.8'
 
 allprojects {
     repositories {

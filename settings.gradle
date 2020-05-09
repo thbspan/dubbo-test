@@ -1,3 +1,4 @@
+enableFeaturePreview('IMPROVED_POM_SUPPORT')
 rootProject.name = 'dubbo-test'
 include 'service-api'
 include 'service-provider'

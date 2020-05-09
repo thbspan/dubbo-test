@@ -1,10 +1,11 @@
 package com.test;
 
-import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import com.alibaba.dubbo.config.annotation.Reference;
 
 @SpringBootApplication
 public class DubboClientBootstrap {
@@ -20,9 +21,6 @@ public class DubboClientBootstrap {
     @Reference(version = "1.0", cluster = "failover", check = false)
     private IHello hello;
 
-    @Reference
-    private AsyncService asyncService;
-
     public static void main(String[] args) {
         SpringApplication.run(DubboClientBootstrap.class).close();
     }
@@ -32,13 +30,6 @@ public class DubboClientBootstrap {
         return args -> {
             System.out.println(hello.say("jack"));
             System.out.println(hello.get(1));
-            asyncService.sayHello("jack").whenComplete((v, t) -> {
-                if (t != null) {
-                    t.printStackTrace();
-                } else {
-                    System.out.println("Async Response: " + v);
-                }
-            });
         };
     }
 }

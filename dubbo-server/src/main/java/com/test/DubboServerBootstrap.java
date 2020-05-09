@@ -9,5 +9,4 @@ public class DubboServerBootstrap {
     public static void main(String[] args) {
         SpringApplication.run(DubboServerBootstrap.class, args);
     }
-
 }

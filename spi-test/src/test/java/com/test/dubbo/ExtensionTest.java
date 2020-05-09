@@ -1,9 +1,10 @@
 package com.test.dubbo;
 
-import org.apache.dubbo.common.URL;
-import org.apache.dubbo.common.extension.ExtensionLoader;
-import org.apache.dubbo.rpc.Filter;
 import org.junit.Test;
+
+import com.alibaba.dubbo.common.URL;
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+import com.alibaba.dubbo.rpc.Filter;
 
 public class ExtensionTest {
 

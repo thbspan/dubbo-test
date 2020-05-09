@@ -1,7 +1,8 @@
 package com.test.spi;
 
-import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.junit.Test;
+
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
 
 public class DubboSPITest {
     @Test
