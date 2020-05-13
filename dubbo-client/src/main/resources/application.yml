@@ -1,6 +1,8 @@
 spring:
   application:
     name: dubbo-client
+  main:
+    allow-bean-definition-overriding: true
 
 dubbo:
   application:
@@ -9,8 +11,6 @@ dubbo:
   protocol:
     name: dubbo
     port: 9527
-  config:
-    multiple: false
   registry:
     address: zookeeper://localhost:2182 | zookeeper://localhost:2181
     file: ${user.home}/.dubbo/dubbo-client.properties

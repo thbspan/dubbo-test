@@ -1,6 +1,8 @@
 spring:
   application:
     name: dubbo-server-sample
+  main:
+    allow-bean-definition-overriding: true
 
 dubbo:
   application:
@@ -12,8 +14,6 @@ dubbo:
     dispatcher: message
     threadpool: fixed
     threads: 200
-  config:
-    multiple: false
   registry:
     # zooker注册中心
     address: zookeeper://localhost:2181
