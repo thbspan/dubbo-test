@@ -9,8 +9,8 @@ dubbo:
   protocol:
     name: dubbo
     port: 9527
+  config:
+    multiple: false
   registry:
-    # zooker注册中心
-    address: zookeeper://localhost:2181
-    # 缓存的服务信息
+    address: zookeeper://localhost:2182 | zookeeper://localhost:2181
     file: ${user.home}/.dubbo/dubbo-client.properties
