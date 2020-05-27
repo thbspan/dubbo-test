@@ -1,6 +1,6 @@
 spring:
   application:
-    name: dubbo-server-sample
+    name: dubbo-server
   main:
     allow-bean-definition-overriding: true
 

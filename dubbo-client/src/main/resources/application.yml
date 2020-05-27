@@ -12,5 +12,5 @@ dubbo:
     name: dubbo
     port: 9527
   registry:
-    address: zookeeper://localhost:2182 | zookeeper://localhost:2181
+    address: zookeeper://localhost:2181
     file: ${user.home}/.dubbo/dubbo-client.properties
