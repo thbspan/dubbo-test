@@ -6,6 +6,7 @@ group 'com.test'
 version '1.0-SNAPSHOT'
 
 ext.dubboVerson = '2.6.8'
+ext.sentinelVersion = '1.7.2'
 
 allprojects {
     repositories {

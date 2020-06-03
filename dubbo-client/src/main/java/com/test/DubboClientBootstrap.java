@@ -18,9 +18,17 @@ public class DubboClientBootstrap {
      * return empty
      * http://dubbo.apache.org/zh-cn/docs/user/demos/local-mock.html
      */
-    @Reference(version = "1.0", cluster = "failover", check = false)
+    @Reference(version = "1.0", cluster = "failover", check = false, mock = "com.test.mock.MockIHello")
     private IHello hello;
 
+    /**
+     * add the flow sentinel VM arguments
+     *
+     * -Djava.net.preferIPv4Stack=true
+     * -Dcsp.sentinel.api.port=8721
+     * -Dcsp.sentinel.dashboard.server=localhost:9090
+     * -Dproject.name=dubbo-client
+     */
     public static void main(String[] args) {
         SpringApplication.run(DubboClientBootstrap.class).close();
     }
@@ -28,8 +36,16 @@ public class DubboClientBootstrap {
     @Bean
     public ApplicationRunner runner() {
         return args -> {
-            System.out.println(hello.say("jack"));
-            System.out.println(hello.get(1));
+            // test qps
+            for (int i = 0; i < 15; i++) {
+                try {
+                    System.out.println(hello.say("jack"));
+                    System.out.println(hello.get(1));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
         };
     }
 }

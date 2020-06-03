@@ -23,5 +23,7 @@ dependencies {
     }
     // 支持telnet命令(序列化依赖fastjson)
     implementation 'com.alibaba:fastjson'
+    implementation "com.alibaba.csp:sentinel-dubbo-adapter:$sentinelVersion"
+    implementation "com.alibaba.csp:sentinel-transport-simple-http:$sentinelVersion"
     testCompile 'junit:junit'
 }

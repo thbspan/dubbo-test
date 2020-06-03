@@ -22,6 +22,7 @@ dependencies {
         exclude group: 'log4j'
     }
 
-
+    implementation "com.alibaba.csp:sentinel-dubbo-adapter:$sentinelVersion"
+    implementation "com.alibaba.csp:sentinel-transport-simple-http:$sentinelVersion"
     testCompile 'junit:junit:4.12'
 }
