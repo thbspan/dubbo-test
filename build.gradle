@@ -3,6 +3,9 @@ version '1.0-SNAPSHOT'
 
 allprojects {
     repositories {
-        jcenter()
+        // jcenter()
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public/'
+        }
     }
 }
