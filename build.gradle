@@ -1,6 +1,9 @@
 group 'com.test'
 version '1.0-SNAPSHOT'
 
+ext.dubboVersion = '2.7.8'
+ext.junitVersion = '4.13.2'
+ext.fastjsonVersion = '1.2.75'
 allprojects {
     repositories {
         // jcenter()
