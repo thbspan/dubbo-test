@@ -9,7 +9,7 @@ sourceCompatibility = 1.8
 
 dependencies {
     testCompile "junit:junit:$junitVersion"
-    implementation ('org.apache.dubbo:dubbo:$dubboVersion') {
+    implementation ("org.apache.dubbo:dubbo:$dubboVersion") {
         exclude group: 'org.springframework'
         exclude group: 'io.netty'
         exclude group: 'org.yaml'

@@ -20,5 +20,5 @@ dependencies {
     }
     // 支持telnet命令(序列化依赖fastjson)
     implementation "com.alibaba:fastjson:$fastjsonVersion"
-    testCompile 'junit:junit:$junitVersion'
+    testCompile "junit:junit:$junitVersion"
 }
