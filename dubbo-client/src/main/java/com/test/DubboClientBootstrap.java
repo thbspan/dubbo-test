@@ -1,6 +1,6 @@
 package com.test;
 
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,12 +15,12 @@ public class DubboClientBootstrap {
      * failsafe null 吞掉错误，返回null，不会报异常
      * mock force强制执行
      * return empty
-     * http://dubbo.apache.org/zh-cn/docs/user/demos/local-mock.html
+     * https://dubbo.apache.org/zh/docs/v2.7/user/examples/local-mock/
      */
-    @Reference(version = "1.0", cluster = "failover", check = false)
+    @DubboReference(version = "1.0", cluster = "failover", check = false, mock = "force:com.test.mock.MockIHello")
     private IHello hello;
 
-    @Reference
+    @DubboReference
     private AsyncService asyncService;
 
     public static void main(String[] args) {

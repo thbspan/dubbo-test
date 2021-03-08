@@ -11,7 +11,7 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 dependencies {
-    compile project(":service-api")
+    implementation project(":service-api")
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation "org.apache.dubbo:dubbo-spring-boot-starter:$dubboVersion"
     implementation "com.alibaba:fastjson:$fastjsonVersion"
@@ -19,5 +19,5 @@ dependencies {
         exclude group: 'org.slf4j', module: 'slf4j-log4j12'
         exclude group: 'log4j', module: 'log4j'
     }
-    testCompile "junit:junit:$junitVersion"
+    testImplementation "junit:junit:$junitVersion"
 }
