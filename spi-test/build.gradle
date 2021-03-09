@@ -9,6 +9,7 @@ sourceCompatibility = 1.8
 
 dependencies {
     testImplementation "junit:junit:$junitVersion"
+    implementation "com.alibaba:fastjson:$fastjsonVersion"
     implementation ("org.apache.dubbo:dubbo:$dubboVersion") {
         exclude group: 'org.springframework'
         exclude group: 'io.netty'

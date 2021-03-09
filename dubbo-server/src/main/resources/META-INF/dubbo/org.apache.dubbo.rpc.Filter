@@ -1,0 +1,1 @@
+serviceExceptionFilter=com.test.filter.ServiceExceptionFilter
