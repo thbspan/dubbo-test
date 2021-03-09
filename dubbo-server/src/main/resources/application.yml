@@ -13,10 +13,10 @@ dubbo:
     threadpool: fixed
     threads: 200
   metadata-report:
-    address: zookeeper://localhost:2181
+    address: nacos://127.0.0.1:8848
   registry:
-    # zooker注册中心
-    address: zookeeper://localhost:2181
+    # 服务注册中心
+    address: nacos://127.0.0.1:8848
     # 缓存的服务信息
     file: ${user.home}/.dubbo/dubbo-server.properties
     simplified: true

@@ -15,9 +15,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation "org.apache.dubbo:dubbo-spring-boot-starter:$dubboVersion"
     implementation "com.alibaba:fastjson:$fastjsonVersion"
-    implementation("org.apache.dubbo:dubbo-dependencies-zookeeper:$dubboVersion") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    implementation ("org.apache.dubbo:dubbo-registry-nacos:$dubboVersion") {
         exclude group: 'log4j', module: 'log4j'
+        exclude group: 'commons-logging', module: 'commons-logging'
     }
     testImplementation "junit:junit:$junitVersion"
 }

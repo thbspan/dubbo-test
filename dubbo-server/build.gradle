@@ -14,9 +14,9 @@ dependencies {
     implementation project(":service-provider")
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation "org.apache.dubbo:dubbo-spring-boot-starter:$dubboVersion"
-    implementation("org.apache.dubbo:dubbo-dependencies-zookeeper:$dubboVersion") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    implementation ("org.apache.dubbo:dubbo-registry-nacos:$dubboVersion") {
         exclude group: 'log4j', module: 'log4j'
+        exclude group: 'commons-logging', module: 'commons-logging'
     }
     // 支持telnet命令(序列化依赖fastjson)
     implementation "com.alibaba:fastjson:$fastjsonVersion"
