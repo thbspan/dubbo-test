@@ -17,14 +17,14 @@ public class DubboClientBootstrap {
      * return empty
      * https://dubbo.apache.org/zh/docs/v2.7/user/examples/local-mock/
      */
-    @DubboReference(version = "1.0", cluster = "failover", check = false, mock = "force:com.test.mock.MockIHello")
+    @DubboReference(version = "1.0", cluster = "failover", check = false)
     private IHello hello;
 
     @DubboReference
     private AsyncService asyncService;
 
     public static void main(String[] args) {
-        SpringApplication.run(DubboClientBootstrap.class).close();
+        SpringApplication.run(DubboClientBootstrap.class, args);
     }
 
     @Bean

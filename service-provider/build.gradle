@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'java-library'
 }
 
 group 'com.test'
@@ -8,6 +9,6 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 dependencies {
-    implementation project(":service-api")
+    api project(":service-api")
     testImplementation "junit:junit:$junitVersion"
 }
