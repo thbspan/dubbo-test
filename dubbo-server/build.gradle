@@ -18,6 +18,8 @@ dependencies {
         exclude group: 'log4j', module: 'log4j'
         exclude group: 'commons-logging', module: 'commons-logging'
     }
+    implementation "com.alibaba.csp:sentinel-apache-dubbo-adapter:$sentinelVersion"
+    implementation "com.alibaba.csp:sentinel-transport-netty-http:$sentinelVersion"
     // 支持telnet命令(序列化依赖fastjson)
     implementation "com.alibaba:fastjson:$fastjsonVersion"
     testImplementation "junit:junit:$junitVersion"

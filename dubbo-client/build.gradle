@@ -12,12 +12,14 @@ sourceCompatibility = 1.8
 
 dependencies {
     implementation project(":service-api")
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation "org.apache.dubbo:dubbo-spring-boot-starter:$dubboVersion"
     implementation "com.alibaba:fastjson:$fastjsonVersion"
     implementation ("org.apache.dubbo:dubbo-registry-nacos:$dubboVersion") {
         exclude group: 'log4j', module: 'log4j'
         exclude group: 'commons-logging', module: 'commons-logging'
     }
+    implementation "com.alibaba.csp:sentinel-apache-dubbo-adapter:$sentinelVersion"
+    implementation "com.alibaba.csp:sentinel-transport-netty-http:$sentinelVersion"
     testImplementation "junit:junit:$junitVersion"
 }

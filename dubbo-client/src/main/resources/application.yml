@@ -1,7 +1,6 @@
 spring:
   application:
     name: dubbo-client
-
 dubbo:
   application:
     name: dubbo-client
@@ -17,3 +16,5 @@ dubbo:
     # 缓存的服务信息
     file: ${user.home}/.dubbo/dubbo-client.properties
     simplified: true
+server:
+  port: 9999
