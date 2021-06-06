@@ -16,3 +16,10 @@ gradle-app.setting
 # idea
 /.idea
 /*/out/
+#eclipse
+/.settings
+/*/.settings
+/*/.project
+/*/bin
+/.project
+/*/.classpath
